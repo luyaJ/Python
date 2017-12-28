@@ -1,11 +1,13 @@
-# 随机生成一个数字，猜测数字的大小
-
 import random
 num = random.randint(0, 100)
 # print(num)
 
 while True:
-    guess = int(input("please input a number(1~100): "))
+    try:
+        guess = int(input("Please input a number(1~100): "))
+    except ValueError as e:
+        print("输入格式不正确，请重新输入数字Input 1~100")
+        continue
     if guess > num:
         print("你的数字猜大了", guess)
         tmp = guess
