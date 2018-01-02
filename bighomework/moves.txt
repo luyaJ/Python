@@ -1,0 +1,4 @@
+UP 5
+DOWN 3
+UP 1
+LEFT 3
